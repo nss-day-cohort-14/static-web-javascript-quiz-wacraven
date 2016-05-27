@@ -1,5 +1,14 @@
 var treeObject = {};
 document.getElementById("growTreeBtn").addEventListener("click", tree);
+document.getElementById("character").addEventListener("keydown", enterListener);
+document.getElementById("treeHeight").addEventListener("keydown", enterListener);
+
+function enterListener(key) {
+	if (13 == key.keyCode) {
+		tree()
+	}
+}
+
 
 function tree() {
 	treeObject.hgt = document.getElementById('treeHeight').value;
